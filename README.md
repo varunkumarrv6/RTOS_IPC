@@ -87,6 +87,14 @@ flowchart TD
     E -->|"HSEM"| G["Take + release HSEM 1<br/>→ HSEM1 IRQ on CM7"]
 ```
 
+### Hardware and live demo
+
+| Board setup | Demo run (click to open the video, 1 min 52 s) |
+|---|---|
+| <img src="docs/media/board_setup.jpg" alt="NUCLEO-H755ZI-Q with DAC-to-ADC loop and logic-analyser wires" width="320"> | <a href="docs/media/demo_run.mp4"><img src="docs/media/demo_run_thumbnail.jpg" alt="Demo run: UART log with HSEM build" width="420"></a> |
+
+NUCLEO-H755ZI-Q powered over the ST-LINK USB. The DAC output is wired back to the ADC input, and the debug pins D0–D4 go to the logic analyser. The video shows a run of the HSEM build (`CFG copy=MDMA notify=HSEM icache=1 dcache=1`) on the UART terminal. Video file: [`docs/media/demo_run.mp4`](docs/media/demo_run.mp4).
+
 ---
 
 ## 3. Build switches and debug pins
