@@ -23,10 +23,8 @@ for t, v in rows[1:]:
     prev = v
 
 def highs(c):
+    """Pair each rising edge with the next falling edge -> list of (rise, fall)."""
     out = []
-    for t0 in rise[c]:
-        nxt = [t for t in fall[c] if t > t0][:1] if False else None
-    # efficient pairing
     fi = 0
     fl = fall[c]
     for t0 in rise[c]:
